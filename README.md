@@ -39,9 +39,10 @@ plt.show()
 ```
 
 
-Faire subplots(1,1) subplots(1) équivaut à faire subplots()
+Faire subplots(1,1) ou subplots(1) équivaut à faire subplots()
 ![](graph1.png)
 
 Maintenant si nous faisons subplots(2)? puis subplots(1,2)?
-
+![](graph2.png)
+![](graph3.png)
 
