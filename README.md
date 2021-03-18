@@ -23,8 +23,8 @@ Mon poste personnel est sous arch-linux et les bibliothèques sont stockées à 
 **/usr/lib/python3.9/site-packages**
 
 ```
-/usr/lib/python3.9/site-packages/matplotlib   
- $  ls py*
+/usr/lib/python3.9/site-packages/matplotlib 
+ $  ls py*
 pylab.py  pyplot.py
 ```
 
@@ -39,5 +39,9 @@ plt.show()
 ```
 
 
+Faire subplots(1,1) subplots(1) équivaut à faire subplots()
+![](graph1.png)
 
-Faire subplots(1) ou subplots(1,1) équivaut à ne rien mettre.
+Maintenant si nous faisons subplots(2)? puis subplots(1,2)?
+
+
