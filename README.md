@@ -50,7 +50,9 @@ Maintenant si nous faisons subplots(2)? puis subplots(1,2)?
 Nous voyons bien sur les deux dernières images que les graphiques ont été doublés verticalement et horizontalement.
 On peut en ajouter autant que l'on souhaite en afficher.
 
-Terminologie Matplotlib:
+Terminologie Matplotlib
+Il y a du jargon au premier abord non intuitif lorsque l'on débute, que l'on voit souvent dans les échanges anglophone.
+En voici quelques uns:
 Figure: est l'objet qui va contenir votre ou vos graphiques. Il faut voir cela comme un conteneur.
 Axe: C'est le graphique en lui même avec tout ce qu'il va contenir ( le titre l'axe des abscisses et des ordonnées, le tracé visuelle de vos données)
 Axis: ce sont les axes des abscisses et des ordonnées. 
@@ -66,4 +68,24 @@ Quand utiliser l'une ou l'autre méthode?
 Il est conseillé d'utiliser la première méthode lorsque l'on veut intégrer son code dans un programme, que le code doit pouvoir être réutilisable.
 La seconde approche se ferait plutôt lorsque l'on voudrait un rendu à chaud, voir ce que cela donnerait comme dans le mode interactif de Python ou bien jupyter le but étant de visualiser la donnée rapidement.
 
+Backends:
+C'est le support sur lequel va se faire le tracé de vos données.
+Il peut être de deux types:
+Le "user interface backends" et le "hard copy backend". Le dernier est le fait de créer un fichier image à partir de votre graphique pour le sauvegarder et l'utiliser plus tard sur votre sur site web statique ou bien dans une présentation. Celui-ci est dit "non-interactive backends"
+Cela se concrétise dans le code de cette manière:
+'''
+matplotlib.pyplot.savefig('nom_du_fichier.png') #Vous pouvez remplacer png par une autre extension
+'''
+Le premier type est de passer par des bibliothèques graphique comme GTK,QT,Tkinter par exemple pour créer vos graphiques. Celui-ci pourra être utilisé dans un programme ou un processus dynamique/interactif, on dit qu'il est "interactive backends". Evidemment pour utiliser un backend particulier il faut au préalable avoir installer les paquets necéssaires à pouvoir l'utiliser.
 
+**Choisir un backend influe sur le rendu du graphique.**
+Nous pouvons nommer les deux grandes famille à savoir le rendu vectoriel et matriciel.
+
+Il y a trois façons de configurer son backend:
+Dans le fichier matplotlibrc
+Dans la variable d'environnement MPLBACKEND
+Ou bien directement dans le code avec la fonctione matplotlib.use()
+
+Si aucun backend n'est défini il détéctera automatiquement le backend utilisable et l'utilisera.
+
+**Mode interactif** 
