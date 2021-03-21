@@ -1,6 +1,6 @@
 **Ceci est une prise de note sur ma compréhension de Matplotlib et surtout des besoins que j'en ai.**
 
-Je m'inspire assez de la documentation officielle que j'ai grossièrement traduit et adapté à mon approche. 
+Je m'inspire grandement de la documentation officielle que j'ai grossièrement traduit et adapté à mon approche. 
 Je vois un nombre de choses fausses sur le net qui est assez déconcertante, le pire étant sur Stack Overflow où l'on balance des réponses sans même comprendre son fonctionnement. Le problème est ce que la réponse peut donner le résutat escompté mais de manière détourné.
 
 Les bases
@@ -10,6 +10,11 @@ Matplotlib est une bibliothèque en Python servant à produire des graphiques et
 
 Elle trace vos données dans ce que l'on appelle une "Figure" qui va contenir un ou plusieurs axes graphiques.
 
+Quelle version utilisons-nous?
+'''
+import matplotlib
+matplotlib.__version__
+'''
 
 Tout commence par l'import de la bibliothèque 
 
@@ -88,4 +93,25 @@ Ou bien directement dans le code avec la fonctione matplotlib.use()
 
 Si aucun backend n'est défini il détéctera automatiquement le backend utilisable et l'utilisera.
 
-**Mode interactif** 
+Les types:
+==========
+
+Attention, lorsque vous créez vos graphiques, gardez bien en tête le type de données que vous souhaitez afficher car ceci peu en modifier l'aspect visuel.
+'''
+>>> i = 10
+>>> type(i)
+<class 'int'>
+>>> i = '10'
+>>> type(i)
+<class 'str'>
+>>> i = [10]
+>>> type(i)
+<class 'list'>
+#String dans une liste
+>>> i = ['10']
+>>> type(i)
+<class 'list'>
+#Entier dans une liste
+'''
+
+Par exemple, il est toujours bon de faire attention à vos données une fois intégrées dans une liste, car le type peut nous tromper.
