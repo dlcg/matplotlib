@@ -97,7 +97,7 @@ Les types:
 ==========
 
 Attention, lorsque vous créez vos graphiques, gardez bien en tête le type de données que vous souhaitez afficher car ceci peu en modifier l'aspect visuel.
-'''
+```
 >>> i = 10
 >>> type(i)
 <class 'int'>
@@ -112,6 +112,6 @@ Attention, lorsque vous créez vos graphiques, gardez bien en tête le type de d
 >>> type(i)
 <class 'list'>
 #Entier dans une liste
-'''
+```
 
 Par exemple, il est toujours bon de faire attention à vos données une fois intégrées dans une liste, car le type peut nous tromper.
