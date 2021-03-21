@@ -107,11 +107,11 @@ Attention, lorsque vous créez vos graphiques, gardez bien en tête le type de d
 >>> i = [10]
 >>> type(i)
 <class 'list'>
-#String dans une liste
+#Entier dans une liste
 >>> i = ['10']
 >>> type(i)
 <class 'list'>
-#Entier dans une liste
+#String dans une liste
 ```
 
 Par exemple, il est toujours bon de faire attention à vos données une fois intégrées dans une liste, car le type peut nous tromper.
